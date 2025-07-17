@@ -1,0 +1,56 @@
+@mixin headerMedia{
+  color: #898989;
+  font-size: 30px;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.header{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem;
+  border-radius: 20px 20px 0 0;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .header__launch{
+    img{
+      border-radius: 100px;
+    }
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    .launch__aside{
+      display: flex;
+      flex-direction: column;
+      .aside__logo{
+        cursor: pointer;
+      }
+      .aside__text{
+        color: #898989;
+        font-size: 16px;
+      }      
+    }
+  }
+
+  .header__nav{
+    .nav__list{
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      .list__basket{
+        @include headerMedia()
+      }
+      .list__basket:hover{
+        transform: translateY(-10px);
+      }
+      .list__fav{
+        @include headerMedia()
+      }
+      .list__fav:hover{
+        transform: translateY(-10px);
+      }
+    }
+  }
+}
