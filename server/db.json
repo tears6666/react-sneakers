@@ -1,66 +1,67 @@
 {
   "sneakers":[
-  {
-    "id": 1,
-    "title": "Nike Blazer Mid 77 Jumbo White Black",
-    "cost": "5551 Руб",
-    "img": "../src/img/blazer-mid.avif",
-    "width": 200 
-  },
-  { 
-    "id": 2,
-    "title": "Nike Dunk Low Cacao Wow",
-    "cost": "6736 Руб",
-    "img": "../src/img/dunk1.avif",
-    "width": 200 
-  },
-  { 
-    "id": 3,
-    "title": "Nike Dunk Low Grey Fog",
-    "cost": "8335 Руб",
-    "img": "../src/img/dunk2.avif",
-    "width": 200   
-  },
-  { 
-    "id": 4,
-    "title": "Nike Air Force 1 '07 'Triple Black'",
-    "cost": "8842 Руб",
-    "img": "../src/img/force-black.avif",
-    "width": 200      
-  },
-  { 
-    "id": 5,
-    "title": "Nike Air Force 1 '07 'Triple White'",
-    "cost": "7982 Руб",
-    "img": "../src/img/force-white.avif",
-    "width": 200     
-  },
-  { 
-    "id": 6,
-    "title": "Nike Air Max Plus Triple Black",
-    "cost": "11042 Руб",
-    "img": "../src/img/max1.avif",
-    "width": 200      
-  },
-  { 
-    "id": 7,
-    "title": "New Balance 530 White Silver Navy",
-    "cost": "7820 Руб",
-    "img": "../src/img/new-balance1.avif",
-    "width": 200    
-  },
-  { 
-    "id": 8,
-    "title": "New Balance 530 Moonbeam",
-    "cost": "6600 Руб",
-    "img": "../src/img/new-balance1.avif",
-    "width": 200    
-  },
-  { 
-    "id": 9,
-    "title": "Nike Air Max Terrascape Plus White Pure Platinum",
-    "cost": "6871 Руб",
-    "img": "../src/img/terra.avif",
-    "width": 200  
-  }]
+		{
+			"id": 1,
+			"title": "Nike Blazer Mid 77 Jumbo White",
+			"cost": 5551,
+			"img": "../src/img/blazer-mid.avif",
+			"width": 200
+		},
+		{
+			"id": 2,
+			"title": "Nike Dunk Low Cacao Wow",
+			"cost": 6736,
+			"img": "../src/img/dunk1.avif",
+			"width": 200
+		},
+		{
+			"id": 3,
+			"title": "Nike Dunk Low Grey Fog Platinum",
+			"cost": 8335,
+			"img": "../src/img/dunk2.avif",
+			"width": 200
+		},
+		{
+			"id": 4,
+			"title": "Nike Air Force 1 '07 'Triple Black'",
+			"cost": 8842,
+			"img": "../src/img/force-black.avif",
+			"width": 200
+		},
+		{
+			"id": 5,
+			"title": "Nike Air Force 1 '07 'Triple White'",
+			"cost": 7982,
+			"img": "../src/img/force-white.avif",
+			"width": 200
+		},
+		{
+			"id": 6,
+			"title": "Nike Air Max Plus Triple Black",
+			"cost": 11042,
+			"img": "../src/img/max1.avif",
+			"width": 200
+		},
+		{
+			"id": 7,
+			"title": "New Balance 530 White Silver Navy",
+			"cost": 7820,
+			"img": "../src/img/new-balance1.avif",
+			"width": 200
+		},
+		{
+			"id": 8,
+			"title": "New Balance 530 Moonbeam",
+			"cost": 6600,
+			"img": "../src/img/new-balance2.avif",
+			"width": 200
+		},
+		{
+			"id": 9,
+			"title": "Nike Air Max Terrascape White",
+			"cost": 6871,
+			"img": "../src/img/terra.avif",
+			"width": 200
+		}
+	]
 }

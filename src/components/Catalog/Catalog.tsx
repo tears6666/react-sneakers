@@ -16,21 +16,28 @@ export default function Catalog() {
 
 	return (
 		<div className={styles.catalog}>
-			<h2 className={styles.catalog__subtitle}>Все кроссовки</h2>
-			<form className={styles.catalog__form}>
-				<CiSearch className={styles.form__icon} />
-				<input
-					type='text'
-					className={styles.form__search}
-					placeholder='Поиск...'
-				/>
-			</form>
+			<div className={styles.catalog__top}>
+				<h2 className={styles.top__subtitle}>Все кроссовки</h2>
+				<form className={styles.top__form}>
+					<CiSearch className={styles.form__icon} />
+					<input
+						type='text'
+						className={styles.form__search}
+						placeholder='Поиск...'
+					/>
+				</form>
+			</div>
 			<div className={styles.catalog__content}>
 				{sneakers.map(sneaker => (
 					<div key={sneaker.id} className={styles.content__card}>
 						<img src={sneaker.img} alt='sneaker' width={sneaker.width} />
-						<p className={styles.card__title}>{sneaker.title}</p>
-						<p className={styles.card__cost}>{sneaker.cost}</p>
+						<div className={styles.card__under}>
+							<p className={styles.under__title}>{sneaker.title}</p>
+							<div className={styles.under__buy}>
+								<p className={styles.buy__text}>Цена</p>
+								<p className={styles.buy__cost}>{sneaker.cost} РУБ</p>
+							</div>
+						</div>
 					</div>
 				))}
 			</div>

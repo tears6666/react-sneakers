@@ -4,9 +4,10 @@ import styles from './styles/App.module.scss'
 export default function App() {
 	return (
 		<>
-			<div className={styles.border}></div>
+			<div className={styles.border__top}></div>
 			<Header />
 			<Catalog />
+			<div className={styles.border__bottom}></div>
 		</>
 	)
 }

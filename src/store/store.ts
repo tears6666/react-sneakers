@@ -1,11 +1,11 @@
 import { create } from 'zustand'
 
 interface IProduct {
-  id: number
-  title: string
-  cost: string
-  img: string
-  width: number
+	id: number
+	title: string
+	cost: number
+	img: string
+	width: number
 }
 interface IProductState {
   sneakers: IProduct[]
