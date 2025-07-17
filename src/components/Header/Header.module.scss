@@ -1,11 +1,12 @@
 @mixin headerMedia{
   color: #898989;
-  font-size: 30px;
+  font-size: 28px;
   cursor: pointer;
   transition: all .3s ease;
 }
 
 .header{
+  border-bottom: 2px solid #ccc;
   max-width: 1200px;
   margin: 0 auto;
   padding: 4rem;
@@ -33,12 +34,11 @@
       }      
     }
   }
-
   .header__nav{
     .nav__list{
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 2rem;
       .list__basket{
         @include headerMedia()
       }

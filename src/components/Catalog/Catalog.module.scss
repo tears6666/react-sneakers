@@ -1,0 +1,29 @@
+.catalog{
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 4rem;
+  .catalog__subtitle{
+    font-size: 28px;
+  }
+  .catalog__form{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    .form__icon{
+      font-size: 15px;
+    }
+    .form__search{
+      width: 100px;
+      height: 100px;
+      font-size: 14px;
+      border: none;
+      outline: none;
+    }
+  }
+}
