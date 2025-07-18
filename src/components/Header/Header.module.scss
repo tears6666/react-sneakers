@@ -40,16 +40,18 @@
       align-items: center;
       gap: 2rem;
       .list__basket{
-        @include headerMedia()
+        @include headerMedia();
       }
       .list__basket:hover{
-        transform: translateY(-10px);
+        transform: translateY(-2px);
+        color: #000;
       }
       .list__fav{
         @include headerMedia()
       }
       .list__fav:hover{
-        transform: translateY(-10px);
+        color: crimson;
+        transform: translateY(-2px);
       }
     }
   }

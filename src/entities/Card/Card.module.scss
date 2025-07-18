@@ -1,0 +1,70 @@
+.card__catalog{
+  display: grid;
+  gap: 20px;
+  justify-items: center;
+  grid-template-columns: repeat(3, 400px);
+}
+.card{
+     position: relative;
+     .card__fav{
+       font-size: 25px;
+       cursor: pointer;
+       color: #898989;
+       position: absolute;
+       top: 15px;
+       left: 15px;
+       border: 1px solid #898989;
+       padding: 5px;
+       border-radius: 5px;
+     }
+     // .card__fav_active{
+     //   font-size: 25px;
+     //   cursor: pointer;
+     //   color: #898989;
+     //   position: absolute;
+     //   top: 15px;
+     //   left: 15px;
+     //   border: 1px solid crimson;
+     //   padding: 5px;
+     //   border-radius: 5px;
+     //   color: crimson;
+     // }
+     padding: 1rem;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     align-items: center;
+     border-radius: 5px;
+     border: 2px solid #ccc;
+     width: 250px;
+     height: 300px;
+     transition: all .3s ease;
+     cursor: pointer;
+     .card__under{
+       display: flex;
+       flex-direction: column;
+       gap: 20px;
+       .under__title{
+         font-size: 20px;
+         font-weight: 600;
+       }
+       .under__buy{
+         display: flex;
+         flex-direction: column;
+         gap: 5px;
+         .buy__text{
+           text-transform: uppercase;
+           font-size: 15px;
+           color: #898989;
+           cursor: text;
+         }
+         .buy__cost{
+           cursor: text;
+           font-size: 16px;
+         }
+       }
+     }
+   }
+   .card:hover{
+     transform: translateY(-2px);
+   }
