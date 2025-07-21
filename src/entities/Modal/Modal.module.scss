@@ -1,0 +1,35 @@
+.modal{
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  width: 100%;
+  top: -25px;
+  left: 0;
+  .modal__overlay{
+    position: relative;
+    background-color: #fff;
+    width: 30vw;
+    border-radius: 5px;
+    .overlay__content{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10rem;
+      padding: 10rem;
+      .content__logo{
+        cursor: pointer;
+      }
+    }
+    .overlay__close{
+      position: absolute;
+      right: 390px;
+      padding: 1rem;
+      font-size: 30px;
+      color: #000;
+      cursor: pointer;
+      transition: all .7s ease;
+    }
+  }
+}
