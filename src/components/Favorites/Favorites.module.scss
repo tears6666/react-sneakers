@@ -1,0 +1,24 @@
+.favorites{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem;
+  height: 670px;
+  background-color: #fff;
+  border-radius: 0 0 20px 20px;
+  .favorites__top{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    .top__back{
+      font-size: 20px;
+      color: #898989;
+    }
+    .top__back:active{
+      color: crimson;
+    }
+    .top__subtitle{
+      font-size: 28px;
+    }
+  }
+
+}

@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react'
 import { MdFavoriteBorder } from 'react-icons/md'
-import type { Product } from '../../@types/types'
+import type { Product } from '../../../@types/types'
 import styles from './Card.module.scss'
 
 export default function Card() {
+	//Fetching
 	const [sneakers, setSneakers] = useState<Product[]>([])
 	useEffect(() => {
-		async function fetchSneakers() {
+		;(async function fetchSneakers() {
 			try {
 				const res = await fetch('http://localhost:3000/sneakers')
 				const data = (await res.json()) as Product[]
@@ -14,10 +15,9 @@ export default function Card() {
 			} catch (error) {
 				console.log(error)
 			}
-		}
-		fetchSneakers()
+		})()
 	})
-
+	//Dispatch
 	return (
 		<div className={styles.card__catalog}>
 			{sneakers.map(sneaker => (

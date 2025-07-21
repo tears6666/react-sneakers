@@ -5,3 +5,10 @@ export interface Product{
   img: string
   width: number
 }
+export interface FavItem {
+	favorite: Product[]
+	favId: number
+}
+export interface Fav {
+	favorites: FavItem[]
+}

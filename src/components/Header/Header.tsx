@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import { MdFavoriteBorder } from 'react-icons/md'
 import { SlBasket } from 'react-icons/sl'
-import { Modal } from '../../entities/Modal/Modal'
+import { Link } from 'react-router-dom'
 import Logo from '../../img/logo.jpeg'
+import { Modal } from '../entities/Modal/Modal'
 import styles from './Header.module.scss'
 
 export default function Header() {
@@ -22,7 +23,9 @@ export default function Header() {
 						onClick={() => setIsOpen(true)}
 						className={styles.list__basket}
 					/>
-					<MdFavoriteBorder className={styles.list__fav} />
+					<Link to={'/favorites'}>
+						<MdFavoriteBorder className={styles.list__fav} />
+					</Link>
 				</ul>
 			</nav>
 			<Modal isOpen={isOpen} onClose={() => setIsOpen(false)}></Modal>
