@@ -1,28 +1,27 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { MdFavoriteBorder } from 'react-icons/md'
-import type { Product } from '../../../@types/types'
+import { useCatalogStore } from '../../store/store'
 import styles from './Card.module.scss'
 
 export default function Card() {
-	//Fetching
-	const [sneakers, setSneakers] = useState<Product[]>([])
-	useEffect(() => {
-		;(async function fetchSneakers() {
-			try {
-				const res = await fetch('http://localhost:3000/sneakers')
-				const data = (await res.json()) as Product[]
-				setSneakers(data)
-			} catch (error) {
-				console.log(error)
-			}
-		})()
-	})
 	//Dispatch
+	const sneakers = useCatalogStore(state => state.products)
+	const fetchProducts = useCatalogStore(state => state.fetchProducts)
+	const addToFavorite = useCatalogStore(state => state.addToFavorite)
+
+	useEffect(() => {
+		try {
+			fetchProducts()
+		} catch (error) {
+			console.log(error)
+		}
+	}, [fetchProducts])
+
 	return (
 		<div className={styles.card__catalog}>
 			{sneakers.map(sneaker => (
 				<div key={sneaker.id} className={styles.card}>
-					<MdFavoriteBorder className={styles.card__fav} />
+					<MdFavoriteBorder onClick={() => addToFavorite} className={styles.card__fav} />
 					<img src={sneaker.img} alt='sneaker' width={sneaker.width} />
 					<div className={styles.card__under}>
 						<p className={styles.under__title}>{sneaker.title}</p>

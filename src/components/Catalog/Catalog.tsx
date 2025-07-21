@@ -1,5 +1,5 @@
 import { CiSearch } from 'react-icons/ci'
-import Card from '../entities/Card/Card'
+import Card from '../../entities/Card/Card'
 import styles from './Catalog.module.scss'
 
 export default function Catalog() {

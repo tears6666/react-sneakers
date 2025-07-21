@@ -2,8 +2,8 @@ import { useState } from 'react'
 import { MdFavoriteBorder } from 'react-icons/md'
 import { SlBasket } from 'react-icons/sl'
 import { Link } from 'react-router-dom'
+import { Modal } from '../../entities/Modal/Modal'
 import Logo from '../../img/logo.jpeg'
-import { Modal } from '../entities/Modal/Modal'
 import styles from './Header.module.scss'
 
 export default function Header() {
