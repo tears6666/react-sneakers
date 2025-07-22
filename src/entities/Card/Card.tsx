@@ -21,7 +21,10 @@ export default function Card() {
 		<div className={styles.card__catalog}>
 			{sneakers.map(sneaker => (
 				<div key={sneaker.id} className={styles.card}>
-					<MdFavoriteBorder onClick={() => addToFavorite} className={styles.card__fav} />
+					<MdFavoriteBorder
+						onClick={() => addToFavorite(sneaker)}
+						className={styles.card__fav}
+					/>
 					<img src={sneaker.img} alt='sneaker' width={sneaker.width} />
 					<div className={styles.card__under}>
 						<p className={styles.under__title}>{sneaker.title}</p>
