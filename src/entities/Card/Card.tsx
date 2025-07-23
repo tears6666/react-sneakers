@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { CiSquarePlus } from 'react-icons/ci'
 import { MdFavoriteBorder } from 'react-icons/md'
 import { useCatalogStore } from '../../store/store'
 import styles from './Card.module.scss'
@@ -7,8 +8,10 @@ export default function Card() {
 	//Dispatch
 	const sneakers = useCatalogStore(state => state.products)
 	const fetchProducts = useCatalogStore(state => state.fetchProducts)
+	//Favorite func
 	const addToFavorite = useCatalogStore(state => state.addToFavorite)
-
+	//Cart func
+	const addToCart = useCatalogStore(state => state.addToCart)
 	useEffect(() => {
 		try {
 			fetchProducts()
@@ -29,8 +32,16 @@ export default function Card() {
 					<div className={styles.card__under}>
 						<p className={styles.under__title}>{sneaker.title}</p>
 						<div className={styles.under__buy}>
-							<p className={styles.buy__text}>Цена</p>
-							<p className={styles.buy__cost}>{sneaker.cost} РУБ</p>
+							<div className={styles.buy__cost}>
+								<p className={styles.cost__text}>Цена</p>
+								<p className={styles.cost__cost}>{sneaker.cost} РУБ</p>
+							</div>
+							<div className={styles.buy__btn}>
+								<CiSquarePlus
+									onClick={() => addToCart(sneaker)}
+									className={styles.btn__plus}
+								/>
+							</div>
 						</div>
 					</div>
 				</div>
