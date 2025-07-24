@@ -10,6 +10,41 @@
     }
   }
   .basket__content{
-    height: 100vh;
+    height: 170vh;
+    position: relative;
+    margin-top: 10rem;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(1, 350px);
+    .content__card{
+      padding: 2rem;
+      height: 170px;
+      border: 1px solid #898989;
+      border-radius: 5px;
+      transition: all .3s ease;
+      .card__remove{
+        color: #898989;
+        cursor: pointer;
+        position: absolute;
+        font-size: 2rem;
+      }
+      .card__under{
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .under__text{
+          text-transform: uppercase;
+          font-size: 16px;
+          color: #898989;
+        }
+        .under__cost{
+          font-size: 15px;
+        }
+      }
+    }
+    .content__card:hover{
+      transform: translateY(-2px);
+    }
   }
 }

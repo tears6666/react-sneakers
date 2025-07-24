@@ -1,4 +1,5 @@
-import { MdFavoriteBorder } from 'react-icons/md'
+import { CiSquarePlus } from 'react-icons/ci'
+import { IoClose } from 'react-icons/io5'
 import { useCatalogStore } from '../../store/store'
 import styles from './Favorites.module.scss'
 
@@ -6,7 +7,7 @@ export default function Favorites() {
 	//Dispatch
 	const favorites = useCatalogStore(state => state.favorites)
 	const removeFromFav = useCatalogStore(state => state.removeFromFavorite)
-
+	const addToCart = useCatalogStore(state => state.addToCart)
 	return (
 		<div className={styles.favorites}>
 			<div className={styles.favorites__top}>
@@ -15,7 +16,7 @@ export default function Favorites() {
 			<div className={styles.favorites__content}>
 				{favorites.map(product => (
 					<div key={product.id} className={styles.content__card}>
-						<MdFavoriteBorder
+						<IoClose
 							onClick={() => removeFromFav(product.id)}
 							className={styles.card__fav}
 						/>
@@ -23,8 +24,16 @@ export default function Favorites() {
 						<div className={styles.card__under}>
 							<p className={styles.under__title}>{product.title}</p>
 							<div className={styles.under__buy}>
-								<p className={styles.buy__text}>Цена</p>
-								<p className={styles.buy__cost}>{product.cost} РУБ</p>
+								<div className={styles.buy__cost}>
+									<p className={styles.cost__text}>Цена</p>
+									<p className={styles.cost__cost}>{product.cost} РУБ</p>
+								</div>
+								<div className={styles.buy__btn}>
+									<CiSquarePlus
+										onClick={() => addToCart(product)}
+										className={styles.btn__plus}
+									/>
+								</div>
 							</div>
 						</div>
 					</div>

@@ -7,7 +7,9 @@ import { useCatalogStore } from '../../store/store'
 import styles from './Header.module.scss'
 
 export default function Header() {
+	//Dispatch
 	const count = useCatalogStore(state => state.initialCount)
+	//useState lover
 	const [isActive, setIsActive] = useState(0)
 	return (
 		<header className={styles.header}>

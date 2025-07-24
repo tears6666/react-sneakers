@@ -1,26 +1,5 @@
 import { create } from 'zustand'
-
-interface IProduct {
-	id: number
-	title: string
-	cost: number
-	img: string
-	width: number
-}
-
-interface IProductState {
-	initialCount: number
-	products: IProduct[]
-	cartItems: IProduct[]
-	favorites: IProduct[]
-	isLoading: boolean
-	errors: string[]
-	fetchProducts: () => void
-	addToFavorite: (product: IProduct) => void
-	addToCart: (product: IProduct) => void
-	removeFromCart: (product: number) => void
-	removeFromFavorite: (productId: number) => void
-}
+import type { IProduct, IProductState } from '../app/@types/types'
 
 export const useCatalogStore = create<IProductState>()(set => ({
 	initialCount: 0,
@@ -53,5 +32,8 @@ export const useCatalogStore = create<IProductState>()(set => ({
 		set(state => ({
 			cartItems: state.cartItems.filter(product => product.id != productId),
 		}))
+	},
+	clearCart: () => {
+		set({ cartItems: [] })
 	},
 }))
